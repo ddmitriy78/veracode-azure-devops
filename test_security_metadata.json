@@ -1,0 +1,99 @@
+{
+    "ADAM Auth": {
+        "import_results": "yes",
+        "stakeholders": {
+            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "dev_lead": ""
+        },
+        "destination": {
+            "ado_org": "CyberProductSecurity",
+            "ado_project": "VM2",
+            "area_path": "VM2\\Veracode\\ADAM_Auth"
+        },
+        "tags": [
+            "ADAM_Auth",
+            "SEC-BUG"
+        ],
+        "excemptions": {
+            "excemptions": [
+                {
+                    "riskID": "risk_workitem_id",
+                    "scan_type": "STATIC",
+                    "attributes": {
+                        "CWE_ID": "352",
+                        "modules": "all"
+                    }
+                }
+            ]
+        },
+        "import_rules": {
+            "severity": "3 and above"
+        }
+    },
+    "DFVault": {
+        "import_results": "yes",
+        "stakeholders": {
+            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "dev_lead": ""
+        },
+        "tags": [
+            "dfvlt"
+        ],
+        "excemptions": {
+            "excemptions": []
+        }
+    },
+    "Ascender HCM": {},
+    "Ascender Integration Applications": {},
+    "Ascender Pay": {},
+    "Ascender PeoplePay": {},
+    "CeridianTax - NextGen": {},
+    "CeridianTax - Tax Portal": {},
+    "CNET Ecrion": {},
+    "Company Service": {},
+    "Data as a Service (DaaS)": {},
+    "DataFuzion CP Module": {},
+    "Powerpay - AuthenticationMS": {},
+    "Powerpay - CompensationMS": {},
+    "Powerpay - DatasyncMS": {},
+    "Powerpay - DispatcherMS": {},
+    "Powerpay - DocumentMS": {},
+    "Powerpay - EmailMS": {},
+    "Powerpay - EmployeeNumberMS": {},
+    "Powerpay - EventLoggerMS": {},
+    "Powerpay - JwtMS": {},
+    "Powerpay - LIB - common-logging": {},
+    "Powerpay - LIB - DataContracts": {},
+    "Powerpay - LIB - EventFramework": {},
+    "Powerpay - LIB - ValidationUtils": {},
+    "Powerpay - LibJwtDecoder": {},
+    "Powerpay - LibMalwareDetection": {},
+    "Powerpay - LibOauthSecurity": {},
+    "Powerpay - LookupMS": {},
+    "Powerpay - MessagingMonitorMS": {},
+    "Powerpay - NotificationMS": {},
+    "Powerpay - OnboardingMS": {},
+    "Powerpay - PayrollCalculationMS": {},
+    "Powerpay - PayStubTaxRelease": {},
+    "Powerpay - PowerpayHRModels": {},
+    "Powerpay - PPAdapterMS": {},
+    "Powerpay - ReportMS": {},
+    "PowerPay - SelfService": {},
+    "Powerpay - ServiceDiscoveryMS": {},
+    "Powerpay - TimeOffRequestMS": {},
+    "Powerpay - TransactionRecorderMS": {},
+    "Powerpay - UserMS": {},
+    "Powerpay - Util - FeesExport": {},
+    "PowerPay Self-Service Android": {},
+    "PowerPay Self-Service IOS": {},
+    "Powerpay.Blue.EngineFileAccess": {},
+    "Redwood Freedom": {},
+    "ReferralService": {},
+    "RewardsFileProcessor": {},
+    "RewardsNotificationProcessorService": {},
+    "RewardsPlatformService": {},
+    "RewardsTransactionEnrichmentFilter": {},
+    "RewardsTransactionReceiver": {},
+    "RewardsTransactionSender": {},
+    "CeridianTax - DWP": {}
+}

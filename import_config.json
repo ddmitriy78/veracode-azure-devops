@@ -1,0 +1,15 @@
+{
+    "work_item_type": "SECBUG",
+    "static_scan_api": {
+        "static_scan": "scan_type=STATIC",
+        "violates_policy_api": "violates_policy=TRUE",
+        "annotations_api": "include_annot=TRUE"
+
+    },
+    "sca_scan_api": {
+        "sca_scan": "scan_type=SCA",
+        "cvss_gte": "cvss_gte=5",
+        "violates_policy_api": "violates_policy=TRUE",
+        "annotations_api": "include_annot=TRUE"
+    }
+}

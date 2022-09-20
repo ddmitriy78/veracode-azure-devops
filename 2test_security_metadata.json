@@ -1,0 +1,40 @@
+{
+    "Dayforce HCM Version 61": {
+        "import_results": "yes",
+        "stakeholders": {
+            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "dev_lead": ""
+        },
+        "destination": {
+            "ado_org": "CyberProductSecurity",
+            "ado_project": "VM2",
+            "area_path": "VM2\\Veracode\\DF_HCM"
+        },
+        "tags": [
+            "SEG-BUG",
+            "dfhcm"
+        ],
+        "excemptions": {
+            "exemptions": []
+        }
+    },
+    "Dayforce HCM Version 62": {
+        "import_results": "yes",
+        "stakeholders": {
+            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "dev_lead": ""
+        },
+        "destination": {
+            "ado_org": "CyberProductSecurity",
+            "ado_project": "VM2",
+            "area_path": "VM2\\Veracode\\DF_HCM"
+        },
+        "tags": [
+            "SEG-BUG",
+            "dfhcm"
+        ],
+        "excemptions": {
+            "exemptions": []
+        }
+    }
+}

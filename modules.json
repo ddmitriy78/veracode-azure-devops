@@ -1,0 +1,36 @@
+[
+    {
+        "app_name": "app_name",
+        "security_champions": [
+            {
+            "name": "name",
+            "emai": "emal@email.com"
+        },
+        {
+            "name": "name",
+            "emai": "email@email.com"
+        }
+    ],
+        "modules": {
+            "module": {
+                "module_name": "module_name",
+                "security_champions": [
+                    {
+                    "name": "name",
+                    "emai": "emal@email.com"
+                },
+                {
+                    "name": "name",
+                    "emai": "emal@email.com"
+                }
+            ],
+                "files":[
+                    {
+                    "file_name": "",
+                    "file_path": ""
+                    }
+                ]
+            }   
+        }
+    }
+]
