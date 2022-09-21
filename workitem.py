@@ -12,8 +12,11 @@ from json import JSONDecodeError
 
 
 x = datetime.datetime.now()
-AZURE_DEVOPS_PAT = os.getenv('MY_PAT')
 
+# Get Azure DevOps PAT from ~/.automation/mypat
+home_directory = os.path.expanduser( '~' ) 
+f = open(home_directory + "/.automation/mypat", 'r')
+AZURE_DEVOPS_PAT = f.read()
 
 # This function expects a bug processed by veracode_findings function
 def find_workitem(bug, destination):
@@ -52,7 +55,6 @@ def find_workitem(bug, destination):
 # This function expects dict with id["id"]
 def get_workitem(id, destination):
     print("get_workitem", id)
-    AZURE_DEVOPS_PAT = os.getenv('MY_PAT')
     workitemid = str(id["id"])
     if destination:
         ado_org = destination["ado_org"]
@@ -64,6 +66,7 @@ def get_workitem(id, destination):
     r = requests.get(url, 
     headers={'Content-Type': 'application/json-patch+json'},
     auth=('', AZURE_DEVOPS_PAT))
+    print()
 
     # print(json.dumps(r.json(), indent=4))
     return json.dumps(r.json(), indent=4)
@@ -190,7 +193,6 @@ def veracode_finding(finding, flaw_url, tags, bug_status):
 
 # Processing bug data to create workitem 
 def create_secbug(bug, destination, static_flow_info):
-    AZURE_DEVOPS_PAT = os.getenv('MY_PAT')
     if destination:
         ado_org = destination["ado_org"]
         ado_project = destination["ado_project"]
@@ -369,7 +371,6 @@ def create_secbug(bug, destination, static_flow_info):
 def update_secbug(id, work_item, bug, destination):
     print("Update Secbug", id)
     workitemid = id["id"]
-    AZURE_DEVOPS_PAT = os.getenv('MY_PAT')
     if destination:
         ado_org = destination["ado_org"]
         ado_project = destination["ado_project"]
@@ -535,7 +536,6 @@ def update_secbug(id, work_item, bug, destination):
 def add_comment_secbug(id, comment, destination):
     print("Update Secbug", id)
     workitemid = id["id"]
-    AZURE_DEVOPS_PAT = os.getenv('MY_PAT')
     if destination:
         ado_org = destination["ado_org"]
         ado_project = destination["ado_project"]

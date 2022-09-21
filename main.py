@@ -203,15 +203,14 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
 
 if __name__ == "__main__":
 
+    # Open metadata config file 
+    relative_dir = os.path.dirname(__file__)
+    f = open(relative_dir + "/security_metadata.json", 'r')
+    security_metadata = json.loads(f.read())
+
     # Get list of applications from Veracode
     app_list = vc_applist.app_list() 
     write_json_file(app_list, "app_list")
-
-    # Open metadata config file 
-    f = open("/Users/p129181/Code/automation/2test_security_metadata.json", 'r')
-    security_metadata = json.loads(f.read())
-    print(security_metadata)
-
 
 ###############################GET SCAN RESULTS#####################################
     threads = []
