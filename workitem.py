@@ -189,7 +189,7 @@ def veracode_finding(finding, flaw_url, tags, bug_status):
     return bug
 
 # Processing bug data to create workitem 
-def create_secbug(bug, destination):
+def create_secbug(bug, destination, static_flow_info):
     AZURE_DEVOPS_PAT = os.getenv('MY_PAT')
     if destination:
         ado_org = destination["ado_org"]
@@ -204,6 +204,12 @@ def create_secbug(bug, destination):
     build_direction = "LEFT_TO_RIGHT"
     table_attributes = {"style" : "width:100%"}
     descrption = convert(bug, build_direction=build_direction, table_attributes=table_attributes)
+    if static_flow_info:
+        build_direction = "LEFT_TO_RIGHT"
+        table_attributes = {"style" : "width:100%"}
+        additional_findings_details = convert(static_flow_info, build_direction=build_direction, table_attributes=table_attributes)
+    else:
+        additional_findings_details = "None"
 
     print("create_secbug", title)
     
@@ -342,10 +348,15 @@ def create_secbug(bug, destination):
     },
     {
     "op": "add",
+    "path": "/fields/Custom.AdditionalFindingsDetails",
+    "value": additional_findings_details
+    },
+    {
+    "op": "add",
     "path": "/fields/System.Tags",
     "value": tags
     }
-    ]
+    ] 
     r = requests.post(url, json=data, 
         headers={'Content-Type': 'application/json-patch+json'},
         auth=('', AZURE_DEVOPS_PAT))

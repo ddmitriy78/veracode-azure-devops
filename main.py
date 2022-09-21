@@ -107,8 +107,12 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
             count += 1
             if scan_type == "STATIC":
                 issueid = finding["finding"]["issue_id"]
+                static_flow_info = vc_findings.get_static_flow_info(app_name, app_guid, issueid)
+            else:
+                static_flow_info = None
             if finding["finding"]["finding_details"]["severity"] >= 3 and cut_off_date.date() < last_seen_date.date():
                 bug_status = "New"
+                
                 #Create bug from findings, processing formating
                 bug = workitem.veracode_finding(finding, flaw_url, tags, bug_status) # NEED TO PASS TAGS 
                 id = workitem.find_workitem(bug, destination)
@@ -117,7 +121,7 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
                 if id["id"] is None:
                     print("found workitem:", id)
                     print("Creating bug: ", bug["Title"])
-                    work_item = workitem.create_secbug(bug, destination)  # Create workitems based on finding 
+                    work_item = workitem.create_secbug(bug, destination, static_flow_info)  # Create workitems based on finding 
                 else:
                     print("Work item already exists:", id)
                     work_item = json.loads(workitem.get_workitem(id, destination))
@@ -204,7 +208,7 @@ if __name__ == "__main__":
     write_json_file(app_list, "app_list")
 
     # Open metadata config file 
-    f = open("/Users/p129181/Code/veracode/2test_security_metadata.json", 'r')
+    f = open("/Users/p129181/Code/automation/2test_security_metadata.json", 'r')
     security_metadata = json.loads(f.read())
     print(security_metadata)
 

@@ -96,29 +96,27 @@ def findings_api2(app_name, app_guid, api):     # api should be a list
 
     return output  
 
-def get_static_flow_info(app_name, app_guid, finding):     # api should be a list
-    if finding["scan_type"] == "STATIC":
-        findingid = finding["issue_id"]
-        try: 
-            response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?id=" + str(findingid) + "/static_flaw_info", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
-            print("api call", "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?id=" + str(findingid) + "/static_flaw_info")
-        except requests.RequestException as e:
-            print("Whoops!")
-            print(e)
-            sys.exit(1)
-        if response.ok:
-            #for x in range(1): # FOR TESTING limiting number of pages to 1
-            try:
-                finding = response.json()
-                if "issue_summary" in finding:
-                    output = finding
-            except JSONDecodeError:
-                output = None
-                print("Error response could not be searialzed")      
-        else:
-            print(response.status_code)   
-            print("API call failed")
+def get_static_flow_info(app_name, app_guid, issueid):     # api should be a list
+
+    try: 
+        response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings/" + str(issueid) + "/static_flaw_info", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
+        print("api call", "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings/" + str(issueid) + "/static_flaw_info")
+    except requests.RequestException as e:
+        print("Whoops!")
+        print(e)
+        sys.exit(1)
+    if response.ok:
+        #for x in range(1): # FOR TESTING limiting number of pages to 1
+        try:
+            finding = response.json()
+            if "issue_summary" in finding:
+                output = finding
+        except JSONDecodeError:
+            output = None
+            print("Error response could not be searialzed")      
     else:
+        print(response.status_code)   
+        print("API call failed")
         output = None
 
     return output  
