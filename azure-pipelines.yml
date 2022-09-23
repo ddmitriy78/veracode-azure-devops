@@ -17,7 +17,9 @@ steps:
     pip install httpie
     pip install veracode_api_signing
     sudo apt-get update -y
-    sudo apt-get install -y jq
+    sudo apt-get install python3 -y
+    sudo apt-get install python3-pip -y
+    
     echo 'packages installed successfully!'
     
     mkdir -p ~/.veracode/
@@ -33,5 +35,6 @@ steps:
     ${MY_PAT}
     EOF
     echo 'Run Python Program'
+    pip3 install -r requirements.txt
     python3 main.py
   displayName: 'Running Pipeline'
