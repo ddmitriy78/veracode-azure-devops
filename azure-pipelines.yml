@@ -20,6 +20,7 @@ steps:
     sudo apt-get install python3 -y
     sudo apt-get install python3-pip -y
     echo 'packages installed successfully!'
+    mkdir -p ~/output/
     mkdir -p ~/.veracode/
     echo 'veracode directory created!'
     cat > ~/.veracode/credentials << EOF
