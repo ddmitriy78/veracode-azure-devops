@@ -1,0 +1,37 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    pip install httpie
+    pip install veracode_api_signing
+    sudo apt-get update -y
+    sudo apt-get install -y jq
+    echo 'packages installed successfully!'
+    
+    mkdir -p ~/.veracode/
+    echo 'veracode directory created!'
+    cat > ~/.veracode/credentials << EOF
+    [default]
+    veracode_api_key_id = ${API_ID}
+    veracode_api_key_secret = ${API_KEY}
+    EOF
+    mkdir -p ~/.automation/
+    echo 'automation directory created!'
+    cat > ~/.automation/mypat << EOF
+    ${MY_PAT}
+    EOF
+    echo 'Run Python Program'
+    python3 main.py
+  displayName: 'Running Pipeline'
