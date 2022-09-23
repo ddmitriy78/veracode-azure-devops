@@ -1,5 +1,6 @@
 #from __future__ import annotations
 from ast import keyword
+from re import T
 import sys
 import requests
 from datetime import date
@@ -205,43 +206,46 @@ if __name__ == "__main__":
 
     # Open metadata config file 
     relative_dir = os.path.dirname(__file__)
-    f = open(relative_dir + "/security_metadata.json", 'r')
+    f = open("security_metadata.json", 'r')
     security_metadata = json.loads(f.read())
 
     # Get list of applications from Veracode
     app_list = vc_applist.app_list() 
     write_json_file(app_list, "app_list")
 
-###############################GET SCAN RESULTS#####################################
-    threads = []
+#########################   ######GET SCAN RESULTS#####################################
+    y = 0
+    while True:
+        threads = []
+        y += 1
+        t = 0
 
-    for app in app_list:
-        flaw_url = "https://analysiscenter.veracode.com/auth/index.jsp#ReviewResultsFlaw:" + str(app["oid"]) + ":" + str(app["id"]) + "::"
+        for app in app_list:
+            flaw_url = "https://analysiscenter.veracode.com/auth/index.jsp#ReviewResultsFlaw:" + str(app["oid"]) + ":" + str(app["id"]) + "::"        
+            app_name = (app["profile"]["name"])
+            app_guid = (app["guid"])
+            for x in range(20):
+                if app_name in security_metadata.keys():
+                    t += 1
+                    app_metadata = security_metadata[app_name]
+                    api_static = (static_scan, annotations_api, violates_policy_api)
+                    api_sca = (sca_scan, cvss_gte, annotations_api)
+                    findings_static = vc_findings.findings_api2(app_name, app_guid, api_static)
+                    findings_sca = vc_findings.findings_api2(app_name, app_guid, api_sca)
 
-        app_name = (app["profile"]["name"])
-        app_guid = (app["guid"])
-        for x in range(10):
-            if app_name in security_metadata.keys():
-                app_metadata = security_metadata[app_name]
-                api_static = (static_scan, annotations_api, violates_policy_api)
-                api_sca = (sca_scan, cvss_gte, annotations_api)
-                findings_static = vc_findings.findings_api2(app_name, app_guid, api_static)
-                findings_sca = vc_findings.findings_api2(app_name, app_guid, api_sca)
+            #####################PROCESS FINDINGS######################
+                    thread1 = "t" + str(t) + "-" + str(y) + "-1"
+                    thread2 = "t" + str(t) + "-" + str(y) + "-2"
 
-        #####################PROCESS FINDINGS######################
-                thread1 = "t" + str(x) + "-1"
-                thread2 = "t" + str(x) + "-2"
-
-                thread1 = threading.Thread(target=process_veracode_findings, args=[findings_static, "STATIC", app_guid, app_name, flaw_url, app_metadata])
-                thread2 = threading.Thread(target=process_veracode_findings, args=[findings_sca, "SCA", app_guid, app_name, flaw_url, app_metadata])
-                thread1.start()
-                thread2.start()
-                threads.append(thread1)
-                threads.append(thread2)
-                print(x)
-            break
-    for thread in threads:
-        thread.join()
+                    thread1 = threading.Thread(target=process_veracode_findings, args=[findings_static, "STATIC", app_guid, app_name, flaw_url, app_metadata])
+                    thread2 = threading.Thread(target=process_veracode_findings, args=[findings_sca, "SCA", app_guid, app_name, flaw_url, app_metadata])
+                    thread1.start()
+                    thread2.start()
+                    threads.append(thread1)
+                    threads.append(thread2)
+                break
+        # for thread in threads:
+        #     thread.join()
 
  
 

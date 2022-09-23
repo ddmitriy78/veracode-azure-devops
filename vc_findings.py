@@ -104,7 +104,6 @@ def get_static_flow_info(app_name, app_guid, issueid):     # api should be a lis
     except requests.RequestException as e:
         print("Whoops!")
         print(e)
-        sys.exit(1)
     if response.ok:
         #for x in range(1): # FOR TESTING limiting number of pages to 1
         try:

@@ -21,7 +21,7 @@
     "Dayforce Activate": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "Daniel.StJacques@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -60,7 +60,7 @@
     "Dayforce Clock Program (Dayforce Touch)": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "theodor.jahnke@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -96,7 +96,7 @@
     "Dayforce Android": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "peter.kubaczkowski@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -115,7 +115,7 @@
     "Dayforce iOS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "peter.kubaczkowski@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -125,7 +125,7 @@
         },
         "tags": [
             "dfios",
-            "SEC-BUG"
+            "SEC-BUG" 
         ],
         "excemptions": {
             "exemptions": [
@@ -151,7 +151,7 @@
     "Dayforce Localization": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "marc.lawrence@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -170,7 +170,7 @@
     "Dayforce Messaging": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "chanchal.kesarwani@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -189,7 +189,7 @@
     "Dayforce Wallet Android": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "colin.young@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -208,7 +208,7 @@
     "Dayforce Wallet iOS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "colin.young@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -227,7 +227,7 @@
     "Dayforce-Identity": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "travis.weber@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -246,7 +246,7 @@
     "DayforceHub": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "oleg.bogomaz@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -265,7 +265,7 @@
     "DF Jobs - API Gateway": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -284,7 +284,7 @@
     "DF Jobs - Application Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -303,7 +303,7 @@
     "DF Jobs - Candidate Portal": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -322,7 +322,7 @@
     "DF Jobs - Client Management Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -341,7 +341,7 @@
     "DF Jobs - File Management Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -360,7 +360,7 @@
     "DF Jobs - Job Posting Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -379,7 +379,7 @@
     "DF Jobs - Resume Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -398,7 +398,7 @@
     "DF Jobs - UI": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "richard.holand@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -418,7 +418,7 @@
     "Powerpay - AuthenticationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -437,7 +437,7 @@
     "Powerpay - CompensationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -456,7 +456,7 @@
     "Powerpay - DatasyncMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -475,7 +475,7 @@
     "Powerpay - DispatcherMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -494,7 +494,7 @@
     "Powerpay - DocumentMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -513,7 +513,7 @@
     "Powerpay - EmailMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -532,7 +532,7 @@
     "Powerpay - EmployeeNumberMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -551,7 +551,7 @@
     "Powerpay - EventLoggerMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -570,7 +570,7 @@
     "Powerpay - JwtMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -589,7 +589,7 @@
     "Powerpay - LIB - common-logging": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -608,7 +608,7 @@
     "Powerpay - LIB - DataContracts": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -627,7 +627,7 @@
     "Powerpay - LIB - EventFramework": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -646,7 +646,7 @@
     "Powerpay - LIB - ValidationUtils": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -665,7 +665,7 @@
     "Powerpay - LibJwtDecoder": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -684,7 +684,7 @@
     "Powerpay - LibMalwareDetection": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -703,7 +703,7 @@
     "Powerpay - LibOauthSecurity": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -722,7 +722,7 @@
     "Powerpay - LookupMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -741,7 +741,7 @@
     "Powerpay - MessagingMonitorMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -760,7 +760,7 @@
     "Powerpay - NotificationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -779,7 +779,7 @@
     "Powerpay - OnboardingMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -798,7 +798,7 @@
     "Powerpay - PayrollCalculationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -817,7 +817,7 @@
     "Powerpay - PayStubTaxRelease": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -836,7 +836,7 @@
     "Powerpay - PowerpayHRModels": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -855,7 +855,7 @@
     "Powerpay - PPAdapterMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -874,7 +874,7 @@
     "Powerpay - ReportMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -893,7 +893,7 @@
     "PowerPay - SelfService": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -912,7 +912,7 @@
     "Powerpay - ServiceDiscoveryMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -931,7 +931,7 @@
     "Powerpay - TimeOffRequestMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -950,7 +950,7 @@
     "Powerpay - TransactionRecorderMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -969,7 +969,7 @@
     "Powerpay - UserMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -988,7 +988,7 @@
     "Powerpay - Util - FeesExport": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -1007,7 +1007,7 @@
     "PowerPay Self-Service Android": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -1026,7 +1026,7 @@
     "PowerPay Self-Service IOS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -1045,7 +1045,7 @@
     "Powerpay.Blue.EngineFileAccess": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "hidayat.banbony@ceridian.com",
             "dev_lead": ""
         },
         "destination": {

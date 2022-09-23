@@ -233,3 +233,7 @@ main.py
 
 ### Annotation API
 https://docs.veracode.com/r/c_annotations_propose_mitigation_rest 
+
+### Deploy as container
+
+
