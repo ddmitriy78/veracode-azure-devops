@@ -237,3 +237,27 @@ https://docs.veracode.com/r/c_annotations_propose_mitigation_rest
 ### Deploy as container
 
 
+
+#### ec2 user data
+##### ubuntu ec2
+    #!/bin/bash
+    sudo snap install docker
+    sudo addgroup --system docker
+    sudo adduser ubuntu docker
+    newgrp docker
+    sudo snap disable docker
+    sudo snap enable docker
+    docker pull 732417314062.dkr.ecr.us-west-2.amazonaws.com/cyber-automation:latest
+    docker run cyber-automation:latest
+##### Amazon Linux ec2
+    #!/bin/bash
+    sudo yum update -y
+    sudo yum install docker -y
+    sudo service docker start
+    sudo usermod -a -G docker ec2-user
+    aws configure set region us-west-2
+    aws configure set output json
+    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 732417314062.dkr.ecr.us-west-2.amazonaws.com
+    docker pull 732417314062.dkr.ecr.us-west-2.amazonaws.com/cyber-automation:latest
+    docker run 732417314062.dkr.ecr.us-west-2.amazonaws.com/cyber-automation:latest 
+

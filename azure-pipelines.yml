@@ -24,13 +24,13 @@ steps:
     echo 'veracode directory created!'
     cat > ~/.veracode/credentials << EOF
     [default]
-    veracode_api_key_id = ${API_ID}
-    veracode_api_key_secret = ${API_KEY}
+    veracode_api_key_id = $(API_ID)
+    veracode_api_key_secret = $(API_KEY)
     EOF
     mkdir -p ~/.automation/
     echo 'automation directory created!'
     cat > ~/.automation/mypat << EOF
-    ${MY_PAT}
+    $(MY_PAT)
     EOF
     echo 'Run Python Program'
     pip3 install -r requirements.txt
