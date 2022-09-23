@@ -234,22 +234,29 @@ main.py
 ### Annotation API
 https://docs.veracode.com/r/c_annotations_propose_mitigation_rest 
 
-### Deploy as container
+### Deploy as container in AWS
+Retrieve an authentication token and authenticate your Docker client to your registry.
+Use the AWS CLI:
+
+    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 392094015516.dkr.ecr.us-west-2.amazonaws.com
+
+Note: If you receive an error using the AWS CLI, make sure that you have the latest version of the AWS CLI and Docker installed.
+Build your Docker image using the following command. For information on building a Docker file from scratch see the instructions here 
+. You can skip this step if your image is already built:
+
+    docker build -t veracode-ado-integration .
+
+After the build completes, tag your image so you can push the image to this repository:
+
+    docker tag veracode-ado-integration:latest 392094015516.dkr.ecr.us-west-2.amazonaws.com/veracode-ado-integration:latest
+
+Run the following command to push this image to your newly created AWS repository:
+
+    docker push 392094015516.dkr.ecr.us-west-2.amazonaws.com/veracode-ado-integration:latest
 
 
+#### Build EC2 (Amazon Linux), deploy and run docker container 
 
-#### ec2 user data
-##### ubuntu ec2
-    #!/bin/bash
-    sudo snap install docker
-    sudo addgroup --system docker
-    sudo adduser ubuntu docker
-    newgrp docker
-    sudo snap disable docker
-    sudo snap enable docker
-    docker pull 732417314062.dkr.ecr.us-west-2.amazonaws.com/cyber-automation:latest
-    docker run cyber-automation:latest
-##### Amazon Linux ec2
     #!/bin/bash
     sudo yum update -y
     sudo yum install docker -y
@@ -257,7 +264,7 @@ https://docs.veracode.com/r/c_annotations_propose_mitigation_rest
     sudo usermod -a -G docker ec2-user
     aws configure set region us-west-2
     aws configure set output json
-    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 732417314062.dkr.ecr.us-west-2.amazonaws.com
-    docker pull 732417314062.dkr.ecr.us-west-2.amazonaws.com/cyber-automation:latest
-    docker run 732417314062.dkr.ecr.us-west-2.amazonaws.com/cyber-automation:latest 
+    aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 392094015516.dkr.ecr.us-west-2.amazonaws.com
+    docker pull 392094015516.dkr.ecr.us-west-2.amazonaws.com/veracode-ado-integration:latest
+    docker run 392094015516.dkr.ecr.us-west-2.amazonaws.com/veracode-ado-integration:latest 
 
