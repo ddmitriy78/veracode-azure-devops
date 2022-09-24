@@ -192,7 +192,7 @@ def veracode_finding(finding, flaw_url, tags, bug_status):
     return bug
 
 # Processing bug data to create workitem 
-def create_secbug(bug, destination, static_flow_info):
+def create_secbug(bug, destination, static_flow_info, app_metadata):
     if destination:
         ado_org = destination["ado_org"]
         ado_project = destination["ado_project"]
@@ -213,6 +213,10 @@ def create_secbug(bug, destination, static_flow_info):
     else:
         additional_findings_details = "None"
 
+    if "stakeholders" in app_metadata.keys(): # check for stakeholders 
+        security_champion = app_metadata["stakeholders"]["security_champions"]
+    else:
+        security_champions = None
     print("create_secbug", title)
     
     data = [
@@ -232,7 +236,7 @@ def create_secbug(bug, destination, static_flow_info):
     'op': 'add',
     'path': '/fields/Description',
     'from': 'dmitriy.dunavetsky@ceridian.com',
-    'value': descrption
+    'value': "@" + security_champion + descrption
     },
     {
     'op': 'add',
@@ -246,12 +250,12 @@ def create_secbug(bug, destination, static_flow_info):
     'from': 'dmitriy.dunavetsky@ceridian.com',
     'value': str(bug["Comments"])
     },
-    # {
-    # 'op': 'add',
-    # 'path': '/fields/System.AssignedTo',
-    # 'from': 'dmitriy.dunavetsky@ceridian.com',
-    # 'value': 'dmitriy.dunavetsky@ceridian.com'
-    # },
+    {
+    'op': 'add',
+    'path': '/fields/System.AssignedTo',
+    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'value': security_champion
+    },
     {
     'op': 'add',
     'path': '/fields/System.AreaPath',

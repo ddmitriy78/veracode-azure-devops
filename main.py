@@ -85,6 +85,10 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
         tags = app_metadata["tags"]
     else:
         tags = None
+    if "stakeholders" in app_metadata.keys(): # check for stakeholders 
+        security_champions = app_metadata["stakeholders"]["security_champions"]
+    else:
+        security_champions = None
     if findings:
         for finding in findings:
             first_found_date = pd.to_datetime(finding["finding"]["finding_status"]["first_found_date"])
@@ -95,16 +99,10 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
             scan_type = finding["finding"]["scan_type"]
             # Define State of the work items based on the Veracode finding
             # FOUND THAT THIS CAN EFFECT CREATING AND UPDATEING WORK ITEMS IF BOARD IS NOT IN SYNC
-            if finding["finding"]["finding_status"]["status"] == "CLOSED":
+            if finding_status == "CLOSED":
                 bug_status = "Closed"
-            # elif finding["finding"]["finding_status"]["resolution_status"] == "PROPOSED":
-            #     bug_status = "Active"
-            # elif finding["finding"]["finding_status"]["resolution_status"] == "REJECTED":
-            #     bug_status = "Active"
-            elif finding["finding"]["finding_status"]["status"] == "OPEN":
+            elif finding_status == "OPEN":
                 bug_status = "New"
-            # else:
-            #     bug_status = "New"
             count += 1
             if scan_type == "STATIC":
                 issueid = finding["finding"]["issue_id"]
@@ -112,7 +110,6 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
             else:
                 static_flow_info = None
             if finding["finding"]["finding_details"]["severity"] >= 3 and cut_off_date.date() < last_seen_date.date():
-                bug_status = "New"
                 
                 #Create bug from findings, processing formating
                 bug = workitem.veracode_finding(finding, flaw_url, tags, bug_status) # NEED TO PASS TAGS 
@@ -122,7 +119,7 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
                 if id["id"] is None:
                     print("found workitem:", id)
                     print("Creating bug: ", bug["Title"])
-                    work_item = workitem.create_secbug(bug, destination, static_flow_info)  # Create workitems based on finding 
+                    work_item = workitem.create_secbug(bug, destination, static_flow_info, app_metadata)  # Create workitems based on finding 
                 else:
                     print("Work item already exists:", id)
                     work_item = json.loads(workitem.get_workitem(id, destination))
@@ -205,17 +202,24 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
 if __name__ == "__main__":
 
     # Open metadata config file 
-    relative_dir = os.path.dirname(__file__)
-    f = open("security_metadata.json", 'r')
-    security_metadata = json.loads(f.read())
+    try: 
+        relative_dir = os.path.dirname(__file__)
+        f = open("2test_security_metadata.json", 'r')
+        security_metadata = json.loads(f.read())
+    except:
+        relative_dir = os.path.dirname(__file__)
+        f = open( relative_dir + "/2test_security_metadata.json", 'r')
+        security_metadata = json.loads(f.read())
 
     # Get list of applications from Veracode
     app_list = vc_applist.app_list() 
     write_json_file(app_list, "app_list")
 
-#########################   ######GET SCAN RESULTS#####################################
+###############################GET SCAN RESULTS#####################################
     y = 0
     while True:
+        if y > 0:
+            time.sleep(14400)
         threads = []
         y += 1
         t = 0

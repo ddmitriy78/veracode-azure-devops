@@ -30,7 +30,7 @@ RUN pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org -
 # COPY . . 
 
 # Expose container port to outside host
-EXPOSE 5000
+# EXPOSE 5000
 
 # Run the application
 CMD [ "python3", "main.py" ]

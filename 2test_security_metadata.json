@@ -12,7 +12,8 @@
         },
         "tags": [
             "SEG-BUG",
-            "dfhcm"
+            "dfhcm",
+            "version61"
         ],
         "excemptions": {
             "exemptions": []
@@ -21,7 +22,7 @@
     "Dayforce HCM Version 62": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "tatiana.khair@ceridian.com",
             "dev_lead": ""
         },
         "destination": {
@@ -31,7 +32,8 @@
         },
         "tags": [
             "SEG-BUG",
-            "dfhcm"
+            "dfhcm",
+            "version62"
         ],
         "excemptions": {
             "exemptions": []
