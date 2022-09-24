@@ -204,11 +204,11 @@ if __name__ == "__main__":
     # Open metadata config file 
     try: 
         relative_dir = os.path.dirname(__file__)
-        f = open("2test_security_metadata.json", 'r')
+        f = open("security_metadata.json", 'r')
         security_metadata = json.loads(f.read())
     except:
         relative_dir = os.path.dirname(__file__)
-        f = open( relative_dir + "/2test_security_metadata.json", 'r')
+        f = open( relative_dir + "security_metadata.json", 'r')
         security_metadata = json.loads(f.read())
 
     # Get list of applications from Veracode
