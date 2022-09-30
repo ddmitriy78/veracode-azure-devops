@@ -10,18 +10,28 @@ import time
 import pandas as pd
 from json import JSONDecodeError
 
+import logger
 
 x = datetime.datetime.now()
 
 # Get Azure DevOps PAT from ~/.automation/mypat
 home_directory = os.path.expanduser( '~' ) 
 f = open(home_directory + "/.automation/mypat", 'r')
-AZURE_DEVOPS_PAT = f.read()
+string = f.read()
+string = string.strip('\n')
+AZURE_DEVOPS_PAT = string
+
+def get_mypat():
+    # Get Azure DevOps PAT from ~/.automation/mypat
+    home_directory = os.path.expanduser( '~' ) 
+    f = open(home_directory + "/.automation/mypat", 'r')
+    AZURE_DEVOPS_PAT = f.read()
+    return AZURE_DEVOPS_PAT
 
 # This function expects a bug processed by veracode_findings function
 def find_workitem(bug, destination):
     title = bug["Title"]
-    print ("find_workitem", title)
+    logger.logger_event("workitem.py", "find_workitem", ("find_workitem", title))
     if destination:
         ado_org = destination["ado_org"]
         ado_project = destination["ado_project"]
@@ -32,9 +42,13 @@ def find_workitem(bug, destination):
     "query": str("Select [System.Id], [System.Title], [System.State] From WorkItems Where [System.Title] = '" + title + "'")
     }
     # print(json.dumps(data, indent=4))
-    r = requests.post(url, json=data, 
-        headers={'Content-Type': 'application/json'},
-        auth=('', AZURE_DEVOPS_PAT))
+    try:
+        r = requests.post(url, json=data, 
+            headers={'Content-Type': 'application/json'},
+            auth=('', AZURE_DEVOPS_PAT))
+    except requests.RequestException as e:
+        logger.logger_event("workitem.py", "find_workitem", ("Whoops, got an error!"))
+        logger.logger_event("workitem.py", "find_workitem", (e))
     #print(json.dumps(r.json(), indent=4))
     try:
         resp_dict = r.json()
@@ -49,12 +63,12 @@ def find_workitem(bug, destination):
             "url": workitemurl
         }
     except JSONDecodeError:
-        print("Error response could not be searialzed")   
+        logger.logger_event("workitem.py", "find_workitem", ("Error response could not be searialzed")) 
     return id
 
 # This function expects dict with id["id"]
 def get_workitem(id, destination):
-    print("get_workitem", id)
+    logger.logger_event("workitem.py", "find_workitem", ("get_workitem", id))
     workitemid = str(id["id"])
     if destination:
         ado_org = destination["ado_org"]
@@ -63,12 +77,14 @@ def get_workitem(id, destination):
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
     else:
         url = "https://dev.azure.com/CyberProductSecurity/VM2/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
-    r = requests.get(url, 
-    headers={'Content-Type': 'application/json-patch+json'},
-    auth=('', AZURE_DEVOPS_PAT))
-    print()
+    try:
+        r = requests.get(url, 
+        headers={'Content-Type': 'application/json-patch+json'},
+        auth=('', AZURE_DEVOPS_PAT))
+    except requests.RequestException as e:
+        logger.logger_event("workitem.py", "get_workitem", ("Whoops, got an error!"))
+        logger.logger_event("workitem.py", "get_workitem", (e))
 
-    # print(json.dumps(r.json(), indent=4))
     return json.dumps(r.json(), indent=4)
 
 # Process veracode finding into a bug for work item
@@ -188,11 +204,12 @@ def veracode_finding(finding, flaw_url, tags, bug_status):
         "Comments": bug_comments,
         "context_guid": finding["finding"]["context_guid"]
     }
-    print("Processed bug", bug_title)
+    logger.logger_event("workitem.py", "get_workitem", ("Processed bug", bug_title))
     return bug
 
 # Processing bug data to create workitem 
 def create_secbug(bug, destination, static_flow_info, app_metadata):
+
     if destination:
         ado_org = destination["ado_org"]
         ado_project = destination["ado_project"]
@@ -217,7 +234,7 @@ def create_secbug(bug, destination, static_flow_info, app_metadata):
         security_champion = app_metadata["stakeholders"]["security_champions"]
     else:
         security_champions = None
-    print("create_secbug", title)
+    logger.logger_event("workitem.py", "create_secbug", ("create_secbug", title))
     
     data = [
     {
@@ -363,17 +380,21 @@ def create_secbug(bug, destination, static_flow_info, app_metadata):
     "value": tags
     }
     ] 
-    r = requests.post(url, json=data, 
-        headers={'Content-Type': 'application/json-patch+json'},
-        auth=('', AZURE_DEVOPS_PAT))
-    print("created bug:", title)
-    print(json.dumps(r.json(), indent=4))
+    try:
+        r = requests.post(url, json=data, 
+            headers={'Content-Type': 'application/json-patch+json'},
+            auth=('', AZURE_DEVOPS_PAT))
+    except requests.RequestException as e:
+        logger.logger_event("workitem.py", "create_secbug", ("Whoops, got an error!"))
+        logger.logger_event("workitem.py", "create_secbug", (e))
+    logger.logger_event("workitem.py", "create_secbug", ("created bug:", title))
+    logger.logger_event("workitem.py", "create_secbug", (json.dumps(r.json(), indent=4)))
     workitem = r.json()
     return workitem
 
 # Update workitem,
 def update_secbug(id, work_item, bug, destination):
-    print("Update Secbug", id)
+    logger.logger_event("workitem.py", "update_secbug", ("Update Secbug", id))
     workitemid = id["id"]
     if destination:
         ado_org = destination["ado_org"]
@@ -390,8 +411,8 @@ def update_secbug(id, work_item, bug, destination):
     build_direction = "LEFT_TO_RIGHT"
     table_attributes = {"style" : "width:100%"}
     descrption = convert(bug, build_direction=build_direction, table_attributes=table_attributes)
-    print("update_secbug", title)
-    print(bug)
+    logger.logger_event("workitem.py", "update_secbug", ("update_secbug", title))
+    logger.logger_event("workitem.py", "update_secbug", (bug))
     data = [
     {
     'op': 'replace',
@@ -527,18 +548,22 @@ def update_secbug(id, work_item, bug, destination):
     'value': str(bug["Due Date"])
     }
     ]
-    print(json.dumps(data, indent=4))
-    r = requests.patch(url, json=data, 
-        headers={'Content-Type': 'application/json-patch+json'},
-        auth=('', AZURE_DEVOPS_PAT))
-    print("updated bug:", title)
-    print(json.dumps(r.json(), indent=4))
+    logger.logger_event("workitem.py", "update_secbug", (json.dumps(data, indent=4)))
+    try:
+        r = requests.patch(url, json=data, 
+            headers={'Content-Type': 'application/json-patch+json'},
+            auth=('', AZURE_DEVOPS_PAT))
+    except requests.RequestException as e:
+        logger.logger_event("workitem.py", "create_secbug", ("Whoops, got an error!"))
+        logger.logger_event("workitem.py", "create_secbug", (e))   
+    logger.logger_event("workitem.py", "update_secbug", ("updated bug:", title))
+    logger.logger_event("workitem.py", "update_secbug", (json.dumps(r.json(), indent=4)))
     workitem = r.json()
     return workitem
 
 # Update workitem,
 def add_comment_secbug(id, comment, destination):
-    print("Update Secbug", id)
+    logger.logger_event("workitem.py", "add_comment_secbug", ("Update Secbug", id))
     workitemid = id["id"]
     if destination:
         ado_org = destination["ado_org"]
@@ -558,5 +583,5 @@ def add_comment_secbug(id, comment, destination):
     r = requests.patch(url, json=data, 
         headers={'Content-Type': 'application/json-patch+json'},
         auth=('', AZURE_DEVOPS_PAT))
-    print("Added comment to :", ado_org, ado_project, workitemid)
-    print(json.dumps(r.json(), indent=4))   
+    logger.logger_event("workitem.py", "add_comment_secbug", ("Added comment to :", ado_org, ado_project, workitemid))
+    logger.logger_event("workitem.py", "add_comment_secbug", (json.dumps(r.json(), indent=4)))

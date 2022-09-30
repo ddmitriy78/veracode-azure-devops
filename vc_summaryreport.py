@@ -17,7 +17,7 @@ app_name = "Dayforce HCM Master"
 def report(app_guid):
  
     try: 
-        response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/summary_report", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
+        response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/summary_report", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
     except requests.RequestException as e:
         print("Whoops!")
         print(e)

@@ -17,14 +17,15 @@ COPY credentials .veracode/
 # Declaring working directory in our container
 WORKDIR /opt/apps/python
 RUN mkdir -p output
+RUN mkdir -p logs
 COPY requirements.txt .
-COPY *.py .
-COPY *.json .
+COPY *.py ./
+COPY *.json ./
 
 
 # Install all requrements for our app
-#RUN pip3 install -r requirements.txt
-RUN pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
+RUN pip3 install -r requirements.txt
+#RUN pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
 
 # Copy source files to $WORKDIR
 # COPY . . 

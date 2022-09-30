@@ -21,6 +21,7 @@ import vc_findings
 import vc_summaryreport
 import workitem
 import vc_annotations
+import logger
 
 first_detection = datetime.datetime.now() - datetime.timedelta(30)
 due_date = datetime.datetime.now() + datetime.timedelta(30)
@@ -44,14 +45,19 @@ def application_compliance():
     output = []
     app_list = vc_applist.app_list() # Get list of applications from Veracode
     for app in vc_applist.compliance(app_list):
-        # print(json.dumps(app, indent=4))
+        #logger.logger_event("main.py", "write_json_file", (json.dumps(app, indent=4)))
         output.append(app)
     return output
 
 def write_json_file(input, filename):
     output = "Writing file", filename
-    print("Writing file", "output/" + filename + ".json")
-    file1 = open("output/" + filename + ".json", 'w')
+    logger.logger_event("main.py", "write_json_file", ("Writing file", "output/" + filename + ".json"))
+    try:
+        file1 = open("output/" + filename + ".json", 'w')
+    except:
+        relative_dir = os.path.dirname(__file__)
+        logger.logger_event("main.py", "write_json_file", ("Didn't find output folder, checking relative path", relative_dir))
+        file1 = open( relative_dir + "/output/" + filename + ".json", 'w')
     file1.write(str(json.dumps(input, indent=4))) # write to file
     file1.close()  
 
@@ -59,7 +65,7 @@ def write_json_file(input, filename):
 
 def write_csv_file(input, filename):
     output = "Writing file", filename
-    print("Writing file", "output/" + filename + ".csv")
+    logger.logger_event("main.py", "write_json_file", ("Writing file", "output/" + filename + ".csv"))
     file1 = open("output/" + filename + ".csv", 'w')
     file1.write(str(input)) # write to file
     file1.close()  
@@ -117,11 +123,11 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
                 bug_last_seen_date = bug["Last Seen Date"]
                 #c hecking if work item exists if does not exist creating work item
                 if id["id"] is None:
-                    print("found workitem:", id)
-                    print("Creating bug: ", bug["Title"])
+                    logger.logger_event("main.py", "write_json_file", ("found workitem:", id))
+                    logger.logger_event("main.py", "write_json_file", ("Creating bug: ", bug["Title"]))
                     work_item = workitem.create_secbug(bug, destination, static_flow_info, app_metadata)  # Create workitems based on finding 
                 else:
-                    print("Work item already exists:", id)
+                    logger.logger_event("main.py", "write_json_file", ("Work item already exists:", id))
                     work_item = json.loads(workitem.get_workitem(id, destination))
                     # Finding workitems that have mitigation submitted for OPEN findings: This steps applies to STATIC and SCA
 
@@ -208,7 +214,7 @@ if __name__ == "__main__":
         security_metadata = json.loads(f.read())
     except:
         relative_dir = os.path.dirname(__file__)
-        f = open( relative_dir + "security_metadata.json", 'r')
+        f = open( relative_dir + "/security_metadata.json", 'r')
         security_metadata = json.loads(f.read())
 
     # Get list of applications from Veracode

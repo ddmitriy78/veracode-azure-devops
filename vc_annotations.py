@@ -9,6 +9,7 @@ import json
 from json import JSONDecodeError
 
 import vc_applist
+import logger
 
 api_base = "https://api.veracode.com/appsec/"
 start_date = datetime.datetime.now() - datetime.timedelta(30)
@@ -49,28 +50,28 @@ def vc_annotations(app_name, app_guid, issueid, comment, action):
     }
     try:
 
-        response = requests.post("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/annotations", json=data, auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example", "Content-Type": "application/json"}, verify = False)
-        print("api call to", app_name, "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/annotations")
+        response = requests.post("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/annotations", json=data, auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example", "Content-Type": "application/json"}, verify = True)
+        logger.logger_event("vc_annotations.py", "vc_annotations", ("api call to", app_name, "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/annotations"))
 
     except requests.RequestException as e:
-        print("Whoops!")
-        print(e)
+        logger.logger_event("vc_annotations.py", "vc_annotations", ("Whoops!"))
+        logger.logger_event("vc_annotations.py", "vc_annotations", (e))
         #sys.exit(1)
-    print(response)
-    print(response.json())
+    logger.logger_event("vc_annotations.py", "vc_annotations", (response))
+    logger.logger_event("vc_annotations.py", "vc_annotations", (response.json()))
 
     try:
         resp_dict = response.json()
         if "findings" in resp_dict.keys():
-            print("Successfully update Veracode Issue:", issueid, "in", app_name)
+            logger.logger_event("vc_annotations.py", "vc_annotations", ("Successfully update Veracode Issue:", issueid, "in", app_name))
         elif "api_errors" in resp_dict["_embedded"]: # Handle error
             
-            print(resp_dict["_embedded"]["api_errors"])
+            logger.logger_event("vc_annotations.py", "vc_annotations", (resp_dict["_embedded"]["api_errors"]))
             output = resp_dict["_embedded"]["api_errors"]
     except JSONDecodeError:
-        print("Error response could not be searialzed")     
+        logger.logger_event("vc_annotations.py", "vc_annotations", ("Error response could not be searialzed"))
     else:
-        print(response.status_code)   
+        logger.logger_event("vc_annotations.py", "vc_annotations", (response.status_code))
     return response 
 
 

@@ -5,6 +5,7 @@ import datetime
 from veracode_api_signing.plugin_requests import RequestsAuthPluginVeracodeHMAC
 import pandas as pd
 import json
+import logger
 
 
 api_base = "https://api.veracode.com/appsec/"
@@ -17,10 +18,10 @@ app_name = "Dayforce HCM Master"
 def get_page_count():
  
     try: 
-        response = requests.get("https://api.veracode.com/appsec/v1/applications/?page=0&size=500", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
+        response = requests.get("https://api.veracode.com/appsec/v1/applications/?page=0&size=500", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
     except requests.RequestException as e:
-        print("Whoops!")
-        print(e)
+        logger.logger_event("vc_applist.py", "get_page_count", ("Whoops!"))
+        logger.logger_event("vc_applist.py", "get_page_count", (e))
         sys.exit(1)
     if response.ok:
         data = response.json()
@@ -28,24 +29,24 @@ def get_page_count():
         total_elements = int(data["page"]["total_elements"])
         list = {"total_elements": total_elements, "total_pages": total_pages}
     else:
-        print(response.status_code)   
+        logger.logger_event("vc_applist.py", "get_page_count", (response.status_code))  
     return list
 
 def app_list(): 
     total_pages = get_page_count()["total_pages"]
     for page in range(total_pages):
         try: 
-            response = requests.get("https://api.veracode.com/appsec/v1/applications/?page="+str(page)+"&size=500", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
+            response = requests.get("https://api.veracode.com/appsec/v1/applications/?page="+str(page)+"&size=500", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
         except requests.RequestException as e:
-            print("Whoops!")
-            print(e)
+            logger.logger_event("vc_applist.py", "app_list", ("Whoops!"))
+            logger.logger_event("vc_applist.py", "app_list", (e))
             sys.exit(1)
         if response.ok:
             data = response.json()
     return data["_embedded"]["applications"]
 
 def compliance(app_list):
-    print(json.dumps(app_list,indent=4))
+    logger.logger_event("vc_applist.py", "compliance", (json.dumps(app_list,indent=4)))
     output = []
     count = 0
     for app in app_list:

@@ -19,7 +19,7 @@ def write_csv_file(input, filename):
 def users(team):     # api should be a list
     teamid = team["team_id"]
     try: 
-        response = requests.get("https://api.veracode.com/api/authn/v2/teams/" + str(teamid) + "?size=5000&page=0", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
+        response = requests.get("https://api.veracode.com/api/authn/v2/teams/" + str(teamid) + "?size=5000&page=0", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
     except requests.RequestException as e:
         print("Whoops!")
         print(e)
@@ -36,7 +36,7 @@ def users(team):     # api should be a list
 if __name__ == "__main__":
 
     try:
-        response = requests.get("https://api.veracode.com/api/authn/v2/teams?size=500&page=0", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = False)
+        response = requests.get("https://api.veracode.com/api/authn/v2/teams?size=500&page=0", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
     except requests.RequestException as e:
         print("Whoops!")
         print(e)
