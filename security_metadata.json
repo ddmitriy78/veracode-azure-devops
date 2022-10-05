@@ -6,7 +6,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\Monolith"
         },
@@ -25,7 +25,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\Veracode"
         },
@@ -64,7 +64,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\Veracode"
         },
@@ -100,7 +100,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_DF_Mobile",
             "area_path": "VM_DF_Mobile\\Android"
         },
@@ -119,7 +119,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_DF_Mobile",
             "area_path": "VM_DF_Mobile\\iOS"
         },
@@ -155,7 +155,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFLOC"
         },
@@ -174,7 +174,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFMSG"
         },
@@ -193,7 +193,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "DF_Wallet",
             "area_path": "DF_Wallet\\Android"
         },
@@ -212,7 +212,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "DF_Wallet",
             "area_path": "DF_Wallet\\iOS"
         },
@@ -231,7 +231,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFID"
         },
@@ -250,7 +250,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFHUB"
         },
@@ -269,7 +269,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -288,7 +288,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -307,7 +307,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -326,7 +326,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -345,7 +345,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -364,7 +364,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -383,7 +383,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -402,7 +402,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_Dayforce_HCM",
             "area_path": "VM_Dayforce_HCM\\DFJOBS"
         },
@@ -422,7 +422,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -441,7 +441,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -460,7 +460,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -479,7 +479,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -498,7 +498,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -517,7 +517,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -536,7 +536,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -555,7 +555,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -574,7 +574,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -593,7 +593,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -612,7 +612,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -631,7 +631,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -650,7 +650,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -669,7 +669,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -688,7 +688,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -707,7 +707,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -726,7 +726,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -745,7 +745,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -764,7 +764,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -783,7 +783,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -802,7 +802,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -821,7 +821,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -840,7 +840,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -859,7 +859,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -878,7 +878,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -897,7 +897,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -916,7 +916,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -935,7 +935,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -954,7 +954,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -973,7 +973,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -992,7 +992,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -1011,7 +1011,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -1030,7 +1030,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },
@@ -1049,7 +1049,7 @@
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CyberProductSecurity",
+            "ado_org": "CeridianCybersecurity",
             "ado_project": "VM_PowerPay",
             "area_path": "VM_PowerPay\\Veracode"
         },

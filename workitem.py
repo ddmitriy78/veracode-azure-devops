@@ -37,7 +37,7 @@ def find_workitem(bug, destination):
         ado_project = destination["ado_project"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/wiql?api-version=6.1-preview.2"
     else:
-        url = "https://dev.azure.com/CyberProductSecurity/VM2/_apis/wit/wiql?api-version=6.1-preview.2"
+        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/wiql?api-version=6.1-preview.2"
     data = {
     "query": str("Select [System.Id], [System.Title], [System.State] From WorkItems Where [System.Title] = '" + title + "'")
     }
@@ -76,7 +76,7 @@ def get_workitem(id, destination):
 
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
     else:
-        url = "https://dev.azure.com/CyberProductSecurity/VM2/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
+        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
     try:
         r = requests.get(url, 
         headers={'Content-Type': 'application/json-patch+json'},
@@ -216,7 +216,7 @@ def create_secbug(bug, destination, static_flow_info, app_metadata):
         area_path = destination["area_path"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/$SECBUG?api-version=6.0"
     else:
-        url = "https://dev.azure.com/CyberProductSecurity/VM2/_apis/wit/workitems/$SECBUG?api-version=6.0"
+        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/$SECBUG?api-version=6.0"
         area_path = "Experimental\\Veracode"
     title = bug["Title"]
     tags = str(bug["Tags"])
@@ -402,7 +402,7 @@ def update_secbug(id, work_item, bug, destination):
         area_path = destination["area_path"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
     else:
-        url = "https://dev.azure.com/CyberProductSecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
+        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
         area_path = "Experimental\\Veracode"
 
     workitemid = str(id["id"])
@@ -571,7 +571,7 @@ def add_comment_secbug(id, comment, destination):
         area_path = destination["area_path"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
     else:
-        url = "https://dev.azure.com/CyberProductSecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
+        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
     data = [
    {
     'op': 'add',
