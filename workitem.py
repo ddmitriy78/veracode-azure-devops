@@ -37,7 +37,7 @@ def find_workitem(bug, destination):
         ado_project = destination["ado_project"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/wiql?api-version=6.1-preview.2"
     else:
-        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/wiql?api-version=6.1-preview.2"
+        url = "https://dev.azure.com/CompanyCybersecurity/VM2/_apis/wit/wiql?api-version=6.1-preview.2"
     data = {
     "query": str("Select [System.Id], [System.Title], [System.State] From WorkItems Where [System.Title] = '" + title + "'")
     }
@@ -76,7 +76,7 @@ def get_workitem(id, destination):
 
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
     else:
-        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
+        url = "https://dev.azure.com/CompanyCybersecurity/VM2/_apis/wit/workitems/" + workitemid + "?api-version=2.0"
     try:
         r = requests.get(url, 
         headers={'Content-Type': 'application/json-patch+json'},
@@ -216,7 +216,7 @@ def create_secbug(bug, destination, static_flow_info, app_metadata):
         area_path = destination["area_path"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/$SECBUG?api-version=6.0"
     else:
-        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/$SECBUG?api-version=6.0"
+        url = "https://dev.azure.com/CompanyCybersecurity/VM2/_apis/wit/workitems/$SECBUG?api-version=6.0"
         area_path = "Experimental\\Veracode"
     title = bug["Title"]
     tags = str(bug["Tags"])
@@ -240,133 +240,133 @@ def create_secbug(bug, destination, static_flow_info, app_metadata):
     {
     'op': 'add',
     'path': '/fields/System.Title',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': title
     },
     {
     'op': 'add',
     'path': '/fields/System.State',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Status"]
     },
     {
     'op': 'add',
     'path': '/fields/Description',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': "@" + security_champion + descrption
     },
     {
     'op': 'add',
     'path': '/fields/Microsoft.VSTS.Common.Severity',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Severity"]
     },
     {
     'op': 'add',
     'path': '/fields/System.History',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Comments"])
     },
     {
     'op': 'add',
     'path': '/fields/System.AssignedTo',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
-    'value': 'dmitriy.dunavetsky@ceridian.com'
+    'from': 'user.name@company.com',
+    'value': 'user.name@company.com'
     },
     {
     'op': 'add',
     'path': '/fields/System.AreaPath',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': area_path
     },
     {
     'op': 'add',
     'path': '/fields/Custom.Category',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Bug Category"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.ComponentFilename',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Component Filename"]
     },
     {
     'op': 'add',
     'path': '/fields/Custom.Module',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Bug Module"]
     },
     {
     'op': 'add',
     'path': '/fields/Custom.CWE',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["CWE"]
     },
     {
     'op': 'add',
     'path': '/fields/Custom.CVE',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["CVE"]
     },
     {
     'op': 'add',
     'path': '/fields/Custom.Source',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Bug Source"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.ScanType',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Scan Type"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.VC_Status',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Status"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.VC_Resolution',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Resolution"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.VC_Resolutions_Status',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Resolutions_Status"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.FileName',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["File Name"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.VC_Application',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Application Profile Name"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.FirstDetectionDate', # should be FirstFoundDate, if redoing ADO fields
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["First Found Date"])
     },
     {
     'op': 'add',
     'path': '/fields/Custom.LastSeenDate',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Last Seen Date"])
     },
     {
     'op': 'add',
     'path': '/fields/Microsoft.VSTS.Scheduling.DueDate',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Due Date"])
     },
     {
@@ -402,7 +402,7 @@ def update_secbug(id, work_item, bug, destination):
         area_path = destination["area_path"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
     else:
-        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
+        url = "https://dev.azure.com/CompanyCybersecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
         area_path = "Experimental\\Veracode"
 
     workitemid = str(id["id"])
@@ -417,134 +417,134 @@ def update_secbug(id, work_item, bug, destination):
     {
     'op': 'replace',
     'path': '/fields/System.Title',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': title
     },
     {
     'op': 'replace',
     'path': '/fields/System.State',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': status
     },
     {
     'op': 'replace',
     'path': '/fields/Microsoft.VSTS.Common.Severity',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Severity"]
     },
     {
     'op': 'replace',
     'path': '/fields/Description',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': descrption
     },
     {
     'op': 'add',
     'path': '/fields/System.History',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': "<h2>updated by automation:</h2>"
     },
 
     # {
     # 'op': 'add',
     # 'path': '/fields/System.AssignedTo',
-    # 'from': 'dmitriy.dunavetsky@ceridian.com',
-    # 'value': 'dmitriy.dunavetsky@ceridian.com'
+    # 'from': 'user.name@company.com',
+    # 'value': 'user.name@company.com'
     # },
     {
     'op': 'replace',
     'path': '/fields/System.AreaPath',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': area_path
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.Category',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Bug Category"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.ComponentFilename',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Component Filename"]
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.Module',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["Bug Module"]
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.CWE',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["CWE"]
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.CVE',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': bug["CVE"]
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.Source',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Bug Source"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.ScanType',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Scan Type"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.VC_Status',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': status
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.VC_Resolution',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Resolution"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.VC_Resolutions_Status',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Resolutions_Status"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.FileName',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["File Name"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.VC_Application',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Application Profile Name"])
     },    
     {
     'op': 'replace',
     'path': '/fields/Custom.FirstDetectionDate',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["First Found Date"])
     },
     {
     'op': 'replace',
     'path': '/fields/Custom.LastSeenDate',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Last Seen Date"])
     },
     {
     'op': 'replace',
     'path': '/fields/Microsoft.VSTS.Scheduling.DueDate',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': str(bug["Due Date"])
     }
     ]
@@ -571,12 +571,12 @@ def add_comment_secbug(id, comment, destination):
         area_path = destination["area_path"]
         url = "https://dev.azure.com/" + ado_org + "/" + ado_project +"/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
     else:
-        url = "https://dev.azure.com/CeridianCybersecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
+        url = "https://dev.azure.com/CompanyCybersecurity/VM2/_apis/wit/workitems/" + str(workitemid) + "?api-version=6.0"
     data = [
    {
     'op': 'add',
     'path': '/fields/System.History',
-    'from': 'dmitriy.dunavetsky@ceridian.com',
+    'from': 'user.name@company.com',
     'value': "<h3>updated by automation:</h3>" + comment
     }
     ]

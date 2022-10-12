@@ -1,14 +1,14 @@
 {
-    "Dayforce HCM Master": {
+    "AppName HCM Master": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "dmitriy.dunavetsky@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\Monolith"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\Monolith"
         },
         "tags": [
             "SEG-BUG",
@@ -18,16 +18,16 @@
             "exemptions": []
         }
     },
-    "Dayforce Activate": {
+    "AppName Activate": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "Daniel.StJacques@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\Veracode"
         },
         "import_rules": {
             "severity": "3 and above"
@@ -57,16 +57,16 @@
             ]
         }
     },
-    "Dayforce Clock Program (Dayforce Touch)": {
+    "AppName Clock Program (AppName Touch)": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "theodor.jahnke@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\Veracode"
         },
         "tags": [
             "dfclocktouch",
@@ -93,14 +93,14 @@
             ]
         }
     },
-    "Dayforce Android": {
+    "AppName Android": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "peter.kubaczkowski@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
+            "ado_org": "CompanyCybersecurity",
             "ado_project": "VM_DF_Mobile",
             "area_path": "VM_DF_Mobile\\Android"
         },
@@ -112,14 +112,14 @@
             "exemptions": []
         }
     },
-    "Dayforce iOS": {
+    "AppName iOS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "peter.kubaczkowski@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
+            "ado_org": "CompanyCybersecurity",
             "ado_project": "VM_DF_Mobile",
             "area_path": "VM_DF_Mobile\\iOS"
         },
@@ -148,16 +148,16 @@
             ]
         }
     },
-    "Dayforce Localization": {
+    "AppName Localization": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "marc.lawrence@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFLOC"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFLOC"
         },
         "tags": [
             "dfloc",
@@ -167,16 +167,16 @@
             "excemptions": []
         }
     },
-    "Dayforce Messaging": {
+    "AppName Messaging": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "chanchal.kesarwani@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFMSG"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFMSG"
         },
         "tags": [
             "dfmsg",
@@ -186,14 +186,14 @@
             "excemptions": []
         }
     },
-    "Dayforce Wallet Android": {
+    "AppName Wallet Android": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "colin.young@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
+            "ado_org": "CompanyCybersecurity",
             "ado_project": "DF_Wallet",
             "area_path": "DF_Wallet\\Android"
         },
@@ -205,14 +205,14 @@
             "excemptions": []
         }
     },
-    "Dayforce Wallet iOS": {
+    "AppName Wallet iOS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "colin.young@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
+            "ado_org": "CompanyCybersecurity",
             "ado_project": "DF_Wallet",
             "area_path": "DF_Wallet\\iOS"
         },
@@ -224,16 +224,16 @@
             "excemptions": []
         }
     },
-    "Dayforce-Identity": {
+    "AppName-Identity": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "travis.weber@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFID"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFID"
         },
         "tags": [
             "dfid",
@@ -243,16 +243,16 @@
             "excemptions": []
         }
     },
-    "DayforceHub": {
+    "AppNameHub": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "oleg.bogomaz@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFHUB"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFHUB"
         },
         "tags": [
             "dfhub",
@@ -262,16 +262,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - API Gateway": {
+    "Microservice - API Gateway": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -281,16 +281,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - Application Service": {
+    "Microservice - Application Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -300,16 +300,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - Candidate Portal": {
+    "Microservice - Portal": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -319,16 +319,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - Client Management Service": {
+    "Microservice - Client Management Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -338,16 +338,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - File Management Service": {
+    "Microservice - File Management Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -357,16 +357,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - Job Posting Service": {
+    "Microservice - Job Posting Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -376,16 +376,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - Resume Service": {
+    "Microservice - Resume Service": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -395,16 +395,16 @@
             "excemptions": []
         }
     },
-    "DF Jobs - UI": {
+    "Microservice - UI": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "richard.holand@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_Dayforce_HCM",
-            "area_path": "VM_Dayforce_HCM\\DFJOBS"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName_HCM",
+            "area_path": "VM_AppName_HCM\\DFJOBS"
         },
         "tags": [
             "dfjob",
@@ -415,646 +415,646 @@
         }
     }
     ,
-    "Powerpay - AuthenticationMS": {
+    "AppName2 - AuthenticationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - CompensationMS": {
+    "AppName2 - CompensationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - DatasyncMS": {
+    "AppName2 - DatasyncMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - DispatcherMS": {
+    "AppName2 - DispatcherMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - DocumentMS": {
+    "AppName2 - DocumentMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - EmailMS": {
+    "AppName2 - EmailMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - EmployeeNumberMS": {
+    "AppName2 - EmployeeNumberMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - EventLoggerMS": {
+    "AppName2 - EventLoggerMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - JwtMS": {
+    "AppName2 - JwtMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LIB - common-logging": {
+    "AppName2 - LIB - common-logging": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "hname.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LIB - DataContracts": {
+    "AppName2 - LIB - DataContracts": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LIB - EventFramework": {
+    "AppName2 - LIB - EventFramework": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.usery@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LIB - ValidationUtils": {
+    "AppName2 - LIB - ValidationUtils": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LibJwtDecoder": {
+    "AppName2 - LibJwtDecoder": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LibMalwareDetection": {
+    "AppName2 - LibMalwareDetection": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LibOauthSecurity": {
+    "AppName2 - LibOauthSecurity": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - LookupMS": {
+    "AppName2 - LookupMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - MessagingMonitorMS": {
+    "AppName2 - MessagingMonitorMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - NotificationMS": {
+    "AppName2 - NotificationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - OnboardingMS": {
+    "AppName2 - OnboardingMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - PayrollCalculationMS": {
+    "AppName2 - PayrollCalculationMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - PayStubTaxRelease": {
+    "AppName2 - PayStubTaxRelease": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - PowerpayHRModels": {
+    "AppName2 - AppName2HRModels": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - PPAdapterMS": {
+    "AppName2 - PPAdapterMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - ReportMS": {
+    "AppName2 - ReportMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "PowerPay - SelfService": {
+    "AppName2 - SelfService": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - ServiceDiscoveryMS": {
+    "AppName2 - ServiceDiscoveryMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - TimeOffRequestMS": {
+    "AppName2 - TimeOffRequestMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - TransactionRecorderMS": {
+    "AppName2 - TransactionRecorderMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - UserMS": {
+    "AppName2 - UserMS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay - Util - FeesExport": {
+    "AppName2 - Util - FeesExport": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "PowerPay Self-Service Android": {
+    "AppName2 Self-Service Android": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "PowerPay Self-Service IOS": {
+    "AppName2 Self-Service IOS": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
             "excemptions": []
         }
     },
-    "Powerpay.Blue.EngineFileAccess": {
+    "AppName2.Blue.EngineFileAccess": {
         "import_results": "yes",
         "stakeholders": {
-            "security_champions": "hidayat.banbony@ceridian.com",
+            "security_champions": "name.user@Company.com",
             "dev_lead": ""
         },
         "destination": {
-            "ado_org": "CeridianCybersecurity",
-            "ado_project": "VM_PowerPay",
-            "area_path": "VM_PowerPay\\Veracode"
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM_AppName2",
+            "area_path": "VM_AppName2\\Veracode"
         },
         "tags": [
-            "powerpay",
+            "AppName2",
             "SEC-BUG"
         ],
         "excemptions": {
