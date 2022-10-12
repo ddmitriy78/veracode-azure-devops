@@ -1,5 +1,5 @@
 {
-    "Dayforce HCM Version 61": {
+    "Test Application Version 61": {
         "import_results": "yes",
         "stakeholders": {
             "security_champions": "user@email.com",
@@ -19,7 +19,7 @@
             "exemptions": []
         }
     },
-    "Dayforce HCM Version 62": {
+    "Test Application Version 62": {
         "import_results": "yes",
         "stakeholders": {
             "security_champions": "user@email.com",
