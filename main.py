@@ -56,7 +56,7 @@ def write_json_file(input, filename):
         file1 = open("output/" + filename + ".json", 'w')
     except:
         relative_dir = os.path.dirname(__file__)
-        logger.logger_event("main.py", "write_json_file", ("Didn't find output folder, checking relative path", relative_dir))
+        logger.logger_error("main.py", "write_json_file", ("Didn't find output folder, checking relative path", relative_dir))
         file1 = open( relative_dir + "/output/" + filename + ".json", 'w')
     file1.write(str(json.dumps(input, indent=4))) # write to file
     file1.close()  
@@ -214,7 +214,7 @@ if __name__ == "__main__":
         security_metadata = json.loads(f.read())
     except:
         relative_dir = os.path.dirname(__file__)
-        f = open( relative_dir + "/security_metadata.json", 'r')
+        f = open( relative_dir + "security_metadata.json", 'r')
         security_metadata = json.loads(f.read())
 
     # Get list of applications from Veracode
@@ -225,6 +225,10 @@ if __name__ == "__main__":
     y = 0
     while True:
         if y > 0:
+            for thread in threads:
+                thread.join()
+            logger.logger_event("main.py", "main", ("Starting program loop #:", y))
+            logger.logger_event("main.py", "main", ("Sleeping for 14400 seconds"))
             time.sleep(14400)
         threads = []
         y += 1
@@ -257,6 +261,7 @@ if __name__ == "__main__":
         # for thread in threads:
         #     thread.join()
 
+ 
  
 
 

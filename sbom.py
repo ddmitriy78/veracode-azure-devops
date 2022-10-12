@@ -106,9 +106,14 @@ if __name__ == "__main__":
     write_json_file(app_list, "app_list")
 
     # Open metadata config file 
-    f = open("/Users/p129181/Code/veracode/2test_security_metadata.json", 'r')
-    security_metadata = json.loads(f.read())
-    print(security_metadata)
+    try: 
+        relative_dir = os.path.dirname(__file__)
+        f = open("security_metadata.json", 'r')
+        security_metadata = json.loads(f.read())
+    except:
+        relative_dir = os.path.dirname(__file__)
+        f = open( relative_dir + "security_metadata.json", 'r')
+        security_metadata = json.loads(f.read())
 
 
 ###############################GET SCAN RESULTS#####################################

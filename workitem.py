@@ -271,7 +271,7 @@ def create_secbug(bug, destination, static_flow_info, app_metadata):
     'op': 'add',
     'path': '/fields/System.AssignedTo',
     'from': 'dmitriy.dunavetsky@ceridian.com',
-    'value': security_champion
+    'value': 'dmitriy.dunavetsky@ceridian.com'
     },
     {
     'op': 'add',
