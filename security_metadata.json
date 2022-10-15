@@ -1,4 +1,22 @@
 {
+    "Default_configuration": {
+        "import_results": "yes",
+        "stakeholders": {
+            "security_champions": "user.name@Company.com",
+            "dev_lead": ""
+        },
+        "destination": {
+            "ado_org": "CompanyCybersecurity",
+            "ado_project": "VM2",
+            "area_path": "VM2\\Veracode"
+        },
+        "tags": [
+            "SEG-BUG"
+        ],
+        "excemptions": {
+            "exemptions": []
+        }
+    },    
     "AppName HCM Master": {
         "import_results": "yes",
         "stakeholders": {

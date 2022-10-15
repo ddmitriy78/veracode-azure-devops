@@ -70,7 +70,7 @@ def write_csv_file(input, filename):
     file1.write(str(input)) # write to file
     file1.close()  
 
-def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url, app_metadata):
+def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url, app_metadata, default_destination):
     #####################PROCESS FINDINGS######################
     count = 0
     output = []
@@ -86,7 +86,7 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
     if "destination" in app_metadata.keys():  # set appropriate ADO organizaiton and project 
         destination = app_metadata["destination"]
     else:
-        destination = None
+        destination = default_destination
     if "tags" in app_metadata.keys(): # set custom tags 
         tags = app_metadata["tags"]
     else:
@@ -187,10 +187,10 @@ def process_veracode_findings(findings, scan_type, app_guid, app_name, flaw_url,
                         action = "COMMENT"
                         comment = "\r\nAction: CLOSED Work Item \r\nName: " + bug["Title"]
                         vc_annotations.vc_annotations(app_name, app_guid, issueid, comment, action)
-                    elif bug["Resolutions_Status"] != work_item["fields"]["Custom.VC_Resolutions_Status"]:  # If Resulution Status doesn't match update the work item.
+                    elif bug["Resolution Status"] != work_item["fields"]["Custom.ResolutionStatus"]:  # If Resulution Status doesn't match update the work item.
                         bug["Status"] = work_item["fields"]["System.State"] # Don't change work item state, update everything else
                         workitem.update_secbug(id, work_item, bug, destination)  
-
+                      
                 output.append(work_item)
 
     else:
@@ -234,6 +234,8 @@ if __name__ == "__main__":
         y += 1
         t = 0
 
+        default_metadata = security_metadata["Default_configuration"]
+        default_destination = default_metadata["destination"]
         for app in app_list:
             flaw_url = "https://analysiscenter.veracode.com/auth/index.jsp#ReviewResultsFlaw:" + str(app["oid"]) + ":" + str(app["id"]) + "::"        
             app_name = (app["profile"]["name"])
@@ -250,9 +252,8 @@ if __name__ == "__main__":
             #####################PROCESS FINDINGS######################
                     thread1 = "t" + str(t) + "-" + str(y) + "-1"
                     thread2 = "t" + str(t) + "-" + str(y) + "-2"
-
-                    thread1 = threading.Thread(target=process_veracode_findings, args=[findings_static, "STATIC", app_guid, app_name, flaw_url, app_metadata])
-                    thread2 = threading.Thread(target=process_veracode_findings, args=[findings_sca, "SCA", app_guid, app_name, flaw_url, app_metadata])
+                    thread1 = threading.Thread(target=process_veracode_findings, args=[findings_static, "STATIC", app_guid, app_name, flaw_url, app_metadata, default_destination])
+                    thread2 = threading.Thread(target=process_veracode_findings, args=[findings_sca, "SCA", app_guid, app_name, flaw_url, app_metadata, default_destination])
                     thread1.start()
                     thread2.start()
                     threads.append(thread1)

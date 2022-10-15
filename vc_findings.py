@@ -19,8 +19,8 @@ def get_page_count(app_name, api):
     try:
         response = requests.get("https://api.veracode.com/appsec/v1/applications/?page=0&size=500", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
     except requests.RequestException as e:
-        logger.logger_event("vc_findings.py", "get_page_count", ("Whoops got an error!"))
-        logger.logger_event("vc_findings.py", "get_page_count", (e))
+        logger.logger_error("vc_findings.py", "get_page_count", ("Whoops got an error!"))
+        logger.logger_error("vc_findings.py", "get_page_count", (e))
         sys.exit(1)   
 
     if response.ok:
@@ -37,8 +37,8 @@ def get_page_count(app_name, api):
     try: 
         response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?size=100&page=0" + "&" + api, auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
     except requests.RequestException as e:
-        logger.logger_event("vc_findings.py", "get_page_count", ("Whoops got an error!"))
-        logger.logger_event("vc_findings.py", "get_page_count", (e))
+        logger.logger_error("vc_findings.py", "get_page_count", ("Whoops got an error!"))
+        logger.logger_error("vc_findings.py", "get_page_count", (e))
         sys.exit(1)
     if response.ok:
         data = response.json()
@@ -46,7 +46,7 @@ def get_page_count(app_name, api):
         total_elements = int(data["page"]["total_elements"])
         list = {"app_name": app_name, "app_guid": app_guid, "total_elements": total_elements, "total_pages": total_pages}
     else:
-        logger.logger_event("vc_findings.py", "get_page_count", (response.status_code)) 
+        logger.logger_error("vc_findings.py", "get_page_count", (response.status_code)) 
     return list    
 
 def findings_api2(app_name, app_guid, api):     # api should be a list
@@ -56,8 +56,8 @@ def findings_api2(app_name, app_guid, api):     # api should be a list
         response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?size=500&page=0" + "&" + str(uri), auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
         logger.logger_event("vc_findings.py", "findings_api2", ("api call", "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?size=500&page=0" + "&" + str(uri)))
     except requests.RequestException as e:
-        logger.logger_event("vc_findings.py", "findings_api2", ("Whoops got an error!"))
-        logger.logger_event("vc_findings.py", "findings_api2", (e))
+        logger.logger_error("vc_findings.py", "findings_api2", ("Whoops got an error!"))
+        logger.logger_error("vc_findings.py", "findings_api2", (e))
         sys.exit(1)
     if response.ok:
         output = []
@@ -75,8 +75,8 @@ def findings_api2(app_name, app_guid, api):     # api should be a list
                 response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?size=500&page=" + str(x) + "&" + str(uri), auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
                 logger.logger_event("vc_findings.py", "findings_api2", ("api call", "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings?size=500&page=" + str(x) + "&" + str(uri)))
             except requests.RequestException as e:
-                logger.logger_event("vc_findings.py", "findings_api2", ("Whoops got an error!"))
-                logger.logger_event("vc_findings.py", "findings_api2", (e))
+                logger.logger_error("vc_findings.py", "findings_api2", ("Whoops got an error!"))
+                logger.logger_error("vc_findings.py", "findings_api2", (e))
                 #sys.exit(1)
             try:
                 resp_dict = response.json()
@@ -89,11 +89,11 @@ def findings_api2(app_name, app_guid, api):     # api should be a list
                         findings_count += 1
                         output.append({"app_name": app_name, "findings_count": findings_count, "finding": finding})
             except JSONDecodeError:
-                logger.logger_event("vc_findings.py", "findings_api2", ("Error response could not be searialzed"))
+                logger.logger_error("vc_findings.py", "findings_api2", ("Error response could not be searialzed"))
         else:
-            logger.logger_event("vc_findings.py", "findings_api2", (response.status_code)) 
+            logger.logger_error("vc_findings.py", "findings_api2", (response.status_code)) 
     else:
-        logger.logger_event("vc_findings.py", "findings_api2", (response.status_code) )
+        logger.logger_error("vc_findings.py", "findings_api2", (response.status_code) )
         output = None
 
     return output  
@@ -104,8 +104,8 @@ def get_static_flow_info(app_name, app_guid, issueid):     # api should be a lis
         response = requests.get("https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings/" + str(issueid) + "/static_flaw_info", auth=RequestsAuthPluginVeracodeHMAC(), headers={"User-Agent": "Python HMAC Example"}, verify = True)
         logger.logger_event("vc_findings.py", "get_static_flow_info", ("api call", "https://api.veracode.com/appsec/v2/applications/" + app_guid + "/findings/" + str(issueid) + "/static_flaw_info"))
     except requests.RequestException as e:
-        logger.logger_event("vc_findings.py", "get_static_flow_info", ("Whoops got an error!"))
-        logger.logger_event("vc_findings.py", "get_static_flow_info", (e))
+        logger.logger_error("vc_findings.py", "get_static_flow_info", ("Whoops got an error!"))
+        logger.logger_error("vc_findings.py", "get_static_flow_info", (e))
     if response.ok:
         try:
             finding = response.json()
@@ -113,10 +113,10 @@ def get_static_flow_info(app_name, app_guid, issueid):     # api should be a lis
                 output = finding
         except JSONDecodeError:
             output = None
-            logger.logger_event("vc_findings.py", "get_static_flow_info", ("Error response could not be searialzed"))
+            logger.logger_error("vc_findings.py", "get_static_flow_info", ("Error response could not be searialzed"))
     else:
-        logger.logger_event("vc_findings.py", "get_static_flow_info", (response.status_code))
-        logger.logger_event("vc_findings.py", "get_static_flow_info", ("API call failed"))
+        logger.logger_error("vc_findings.py", "get_static_flow_info", (response.status_code))
+        logger.logger_error("vc_findings.py", "get_static_flow_info", ("API call failed"))
         output = None
 
     return output  
